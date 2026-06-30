@@ -75,7 +75,7 @@ export function Contact() {
           <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
             {/* ── Info panel ─────────────────────────── */}
             <div className="relative overflow-hidden border-b border-hairline p-8 lg:border-b-0 lg:border-r lg:p-12">
-              <div className="absolute -right-16 -top-16 size-64 rounded-full bg-[radial-gradient(circle,rgba(108,99,255,0.25),transparent_65%)] blur-2xl" />
+              <div className="absolute -right-16 -top-16 size-64 rounded-full bg-[radial-gradient(circle,rgba(0,255,240,0.25),transparent_65%)] blur-2xl" />
               <div className="relative">
                 <SectionHeading
                   align="left"

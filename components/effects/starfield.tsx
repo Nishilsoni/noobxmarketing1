@@ -52,7 +52,7 @@ export function Starfield({ density = 0.00014 }: { density?: number }) {
       });
     }
 
-    const palette = ["#ffffff", "#b6c0d9", "#8b84ff", "#60a5fa"];
+    const palette = ["#ffffff", "#b6c0d9", "#4dfff5", "#60a5fa"];
     function color(i: number) {
       return palette[i % palette.length];
     }

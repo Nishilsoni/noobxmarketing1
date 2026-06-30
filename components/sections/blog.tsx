@@ -124,7 +124,7 @@ export function Blog() {
                   </div>
                 </div>
                 <div className="relative hidden aspect-[4/3] overflow-hidden rounded-2xl border border-hairline lg:block">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(108,99,255,0.35),transparent_55%),radial-gradient(circle_at_80%_80%,rgba(59,130,246,0.3),transparent_55%)]" />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,255,240,0.35),transparent_55%),radial-gradient(circle_at_80%_80%,rgba(59,130,246,0.3),transparent_55%)]" />
                   <div className="absolute inset-0 bg-grid opacity-40" />
                   <span className="absolute bottom-4 left-4 text-xs text-stardust">
                     {formatDate(featured.publishedAt)} · {featured.author.name}

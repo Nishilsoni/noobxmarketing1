@@ -12,7 +12,7 @@ export function CosmicBackground() {
       <div className="absolute inset-0 bg-[radial-gradient(125%_125%_at_50%_-10%,#0b1026_0%,#050816_55%,#03040c_100%)]" />
 
       {/* Aurora blooms */}
-      <div className="animate-aurora absolute -left-1/4 -top-1/3 h-[70vmax] w-[70vmax] rounded-full bg-[radial-gradient(circle,rgba(108,99,255,0.18),transparent_60%)] blur-3xl" />
+      <div className="animate-aurora absolute -left-1/4 -top-1/3 h-[70vmax] w-[70vmax] rounded-full bg-[radial-gradient(circle,rgba(0,255,240,0.18),transparent_60%)] blur-3xl" />
       <div
         className="animate-aurora absolute -right-1/4 top-1/4 h-[60vmax] w-[60vmax] rounded-full bg-[radial-gradient(circle,rgba(59,130,246,0.14),transparent_60%)] blur-3xl"
         style={{ animationDelay: "-7s", animationDuration: "26s" }}

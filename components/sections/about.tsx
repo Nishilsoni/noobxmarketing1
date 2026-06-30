@@ -28,7 +28,7 @@ export function About() {
             <SpotlightCard className="h-full">
               <div className="relative h-full p-8 lg:p-10">
                 <div className="absolute -right-6 -top-6 opacity-60">
-                  <Planet id="mission" size={90} from="#6c63ff" to="#7c3aed" glow />
+                  <Planet id="mission" size={90} from="#00fff0" to="#7c3aed" glow />
                 </div>
                 <span className="flex size-12 items-center justify-center rounded-2xl bg-nebula-500/15 text-nebula-300">
                   <Compass className="size-6" aria-hidden />

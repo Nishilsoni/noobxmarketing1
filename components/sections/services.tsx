@@ -15,7 +15,7 @@ const accentMap: Record<
     iconBg: "from-nebula-500/25 to-nebula-500/5",
     iconText: "text-nebula-300",
     stat: "text-nebula-300",
-    ring: "group-hover/card:shadow-[0_0_50px_-12px_rgba(108,99,255,0.5)]",
+    ring: "group-hover/card:shadow-[0_0_50px_-12px_rgba(0,255,240,0.5)]",
   },
   cosmos: {
     iconBg: "from-cosmos-500/25 to-cosmos-500/5",

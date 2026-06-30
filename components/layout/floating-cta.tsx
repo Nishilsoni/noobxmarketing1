@@ -71,7 +71,7 @@ export function FloatingCTA() {
               <a
                 href="#contact"
                 onClick={() => setDismissed(true)}
-                className="flex h-11 flex-1 items-center justify-center gap-2 rounded-xl bg-[linear-gradient(110deg,var(--color-nebula-500),var(--color-violet-500),var(--color-cosmos-500))] text-sm font-medium text-white"
+                className="flex h-11 flex-1 items-center justify-center gap-2 rounded-xl bg-[linear-gradient(110deg,var(--color-nebula-400),var(--color-nebula-500)_45%,var(--color-cosmos-400))] text-sm font-semibold text-space-950"
               >
                 <CalendarClock className="size-4" aria-hidden />
                 Book Free Consultation

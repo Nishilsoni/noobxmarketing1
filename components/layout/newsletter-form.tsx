@@ -60,7 +60,7 @@ export function NewsletterForm() {
         <button
           type="submit"
           disabled={state === "loading" || state === "done"}
-          className="inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-nebula-500 text-white transition-colors hover:bg-nebula-400 disabled:opacity-70"
+          className="inline-flex size-9 shrink-0 items-center justify-center rounded-full bg-nebula-500 text-space-950 transition-colors hover:bg-nebula-400 disabled:opacity-70"
           aria-label="Subscribe to newsletter"
         >
           {state === "loading" ? (

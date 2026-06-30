@@ -14,10 +14,10 @@
   --color-space-700: #1a2238;
 
   /* Brand accents */
-  --color-nebula-500: #6c63ff; /* primary accent */
-  --color-nebula-400: #8b84ff;
-  --color-nebula-300: #aaa4ff;
-  --color-nebula-600: #5a51e6;
+  --color-nebula-500: #00fff0; /* primary accent */
+  --color-nebula-400: #4dfff5;
+  --color-nebula-300: #99fffa;
+  --color-nebula-600: #00d6c8;
   --color-cosmos-500: #3b82f6; /* secondary accent */
   --color-cosmos-400: #60a5fa;
   --color-violet-500: #7c3aed; /* highlight */

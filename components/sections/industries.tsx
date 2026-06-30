@@ -136,7 +136,7 @@ function IndustryScreen({ ind, index }: { ind: Industry; index: number }) {
       </h3>
 
       {/* Hero metric card */}
-      <div className="relative mt-3 overflow-hidden rounded-2xl border border-white/10 bg-[linear-gradient(150deg,rgba(108,99,255,0.18),rgba(18,25,44,0.4))] p-3">
+      <div className="relative mt-3 overflow-hidden rounded-2xl border border-white/10 bg-[linear-gradient(150deg,rgba(0,255,240,0.18),rgba(18,25,44,0.4))] p-3">
         <div className="flex items-start justify-between">
           <span className="flex size-8 items-center justify-center rounded-xl bg-white/10 text-nebula-200">
             <Icon name={ind.icon} className="size-4" />
@@ -195,7 +195,7 @@ function CtaScreen() {
         </p>
         <a
           href="#contact"
-          className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-[linear-gradient(110deg,var(--color-nebula-500),var(--color-violet-500),var(--color-cosmos-500))] px-4 py-2 text-[11px] font-semibold text-white"
+          className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-[linear-gradient(110deg,var(--color-nebula-400),var(--color-nebula-500)_45%,var(--color-cosmos-400))] px-4 py-2 text-[11px] font-semibold text-space-950"
         >
           Map my growth <ArrowRight className="size-3" aria-hidden />
         </a>
@@ -216,12 +216,12 @@ function Sparkline() {
     >
       <defs>
         <linearGradient id="spark-stroke" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stopColor="#6c63ff" />
+          <stop offset="0%" stopColor="#00fff0" />
           <stop offset="100%" stopColor="#34d399" />
         </linearGradient>
         <linearGradient id="spark-fill" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#6c63ff" stopOpacity="0.35" />
-          <stop offset="100%" stopColor="#6c63ff" stopOpacity="0" />
+          <stop offset="0%" stopColor="#00fff0" stopOpacity="0.35" />
+          <stop offset="100%" stopColor="#00fff0" stopOpacity="0" />
         </linearGradient>
       </defs>
       <path

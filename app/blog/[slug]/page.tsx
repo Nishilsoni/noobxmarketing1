@@ -115,7 +115,7 @@ export default async function BlogPostPage({
         {/* Hero band */}
         <div className="mx-auto mt-10 aspect-[2/1] max-w-4xl overflow-hidden rounded-3xl border border-hairline">
           <div className="relative h-full w-full">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(108,99,255,0.4),transparent_55%),radial-gradient(circle_at_80%_80%,rgba(59,130,246,0.35),transparent_55%)]" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_20%,rgba(0,255,240,0.4),transparent_55%),radial-gradient(circle_at_80%_80%,rgba(59,130,246,0.35),transparent_55%)]" />
             <div className="absolute inset-0 bg-grid opacity-40" />
           </div>
         </div>

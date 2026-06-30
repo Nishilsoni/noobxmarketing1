@@ -32,7 +32,8 @@ export default function OpengraphImage() {
               width: 56,
               height: 56,
               borderRadius: 16,
-              background: "linear-gradient(135deg, #6c63ff, #3b82f6)",
+              background: "linear-gradient(135deg, #00fff0, #3b82f6)",
+              color: "#050816",
               fontSize: 32,
               fontWeight: 700,
             }}
@@ -72,7 +73,7 @@ export default function OpengraphImage() {
             <span>Launch Your Brand Into</span>
             <span
               style={{
-                background: "linear-gradient(100deg, #ffffff, #8b84ff, #60a5fa)",
+                background: "linear-gradient(100deg, #ffffff, #4dfff5, #60a5fa)",
                 backgroundClip: "text",
                 color: "transparent",
               }}

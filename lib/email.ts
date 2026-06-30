@@ -134,7 +134,7 @@ function shell(title: string, rows: [string, string][]) {
     <table role="presentation" width="100%" style="max-width:560px;margin:0 auto;background:#0b1026;border:1px solid #1a2238;border-radius:16px;overflow:hidden;">
       <tr>
         <td style="padding:24px 24px 8px;">
-          <div style="display:inline-block;background:linear-gradient(135deg,#6c63ff,#3b82f6);color:#fff;width:36px;height:36px;line-height:36px;text-align:center;border-radius:10px;font-weight:700;">N</div>
+          <div style="display:inline-block;background:linear-gradient(135deg,#00fff0,#3b82f6);color:#fff;width:36px;height:36px;line-height:36px;text-align:center;border-radius:10px;font-weight:700;">N</div>
           <span style="color:#fff;font-size:18px;font-weight:600;margin-left:10px;">NoobxMarketing</span>
         </td>
       </tr>

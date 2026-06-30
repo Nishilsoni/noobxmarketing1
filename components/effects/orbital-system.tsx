@@ -12,7 +12,7 @@ export function OrbitalSystem({ className }: { className?: string }) {
       aria-label="Glowing planet orbited by satellites"
     >
       {/* Ambient bloom */}
-      <div className="absolute inset-[12%] rounded-full bg-[radial-gradient(circle,rgba(108,99,255,0.35),transparent_62%)] blur-2xl" />
+      <div className="absolute inset-[12%] rounded-full bg-[radial-gradient(circle,rgba(0,255,240,0.35),transparent_62%)] blur-2xl" />
 
       {/* Concentric orbit rings (fade at edges for depth) */}
       <div className="absolute inset-0 rounded-full border border-white/10 [mask-image:radial-gradient(circle,transparent_56%,#000_57%)] opacity-70" />
@@ -27,7 +27,7 @@ export function OrbitalSystem({ className }: { className?: string }) {
       >
         <defs>
           <linearGradient id="ring-grad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#8b84ff" stopOpacity="0.9" />
+            <stop offset="0%" stopColor="#4dfff5" stopOpacity="0.9" />
             <stop offset="50%" stopColor="#3b82f6" stopOpacity="0.25" />
             <stop offset="100%" stopColor="#10b981" stopOpacity="0.6" />
           </linearGradient>
@@ -47,7 +47,7 @@ export function OrbitalSystem({ className }: { className?: string }) {
 
       {/* Orbiting satellites — each wrapper spins, moon sits at top */}
       <Orbit inset="0%" duration="34s">
-        <Moon size="3.5%" from="#8b84ff" to="#6c63ff" />
+        <Moon size="3.5%" from="#4dfff5" to="#00fff0" />
       </Orbit>
       <Orbit inset="13%" duration="22s" reverse>
         <Moon size="2.6%" from="#60a5fa" to="#3b82f6" />
@@ -61,9 +61,9 @@ export function OrbitalSystem({ className }: { className?: string }) {
         className="absolute inset-[37%] z-10 rounded-full"
         style={{
           background:
-            "radial-gradient(circle at 32% 26%, #c4bdff 0%, #8b84ff 22%, #6c63ff 42%, #3a2a8c 72%, #140d36 100%)",
+            "radial-gradient(circle at 32% 26%, #c4fffb 0%, #4dfff5 22%, #00fff0 42%, #066b64 72%, #022b29 100%)",
           boxShadow:
-            "inset -16px -18px 38px rgba(5,4,18,0.65), inset 14px 12px 30px rgba(255,255,255,0.18), 0 0 60px rgba(108,99,255,0.5), 0 0 120px rgba(124,58,237,0.25)",
+            "inset -16px -18px 38px rgba(5,4,18,0.65), inset 14px 12px 30px rgba(255,255,255,0.18), 0 0 60px rgba(0,255,240,0.5), 0 0 120px rgba(124,58,237,0.25)",
         }}
       >
         {/* specular highlight */}

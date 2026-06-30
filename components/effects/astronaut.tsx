@@ -27,13 +27,13 @@ export function Astronaut({ className }: { className?: string }) {
           <stop offset="100%" stopColor="#05081a" />
         </radialGradient>
         <linearGradient id="visor-glass" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#8b84ff" stopOpacity="0.9" />
+          <stop offset="0%" stopColor="#4dfff5" stopOpacity="0.9" />
           <stop offset="50%" stopColor="#3b82f6" stopOpacity="0.25" />
           <stop offset="100%" stopColor="#10b981" stopOpacity="0.15" />
         </linearGradient>
         <radialGradient id="halo" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#6c63ff" stopOpacity="0.55" />
-          <stop offset="100%" stopColor="#6c63ff" stopOpacity="0" />
+          <stop offset="0%" stopColor="#00fff0" stopOpacity="0.55" />
+          <stop offset="100%" stopColor="#00fff0" stopOpacity="0" />
         </radialGradient>
         <linearGradient id="pack" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor="#3b4470" />
@@ -76,7 +76,7 @@ export function Astronaut({ className }: { className?: string }) {
       {/* Chest control panel */}
       <rect x="142" y="196" width="36" height="26" rx="7" fill="#0c122c" />
       <circle cx="151" cy="209" r="3.4" fill="#10b981" />
-      <circle cx="161" cy="209" r="3.4" fill="#6c63ff" />
+      <circle cx="161" cy="209" r="3.4" fill="#00fff0" />
       <circle cx="171" cy="209" r="3.4" fill="#3b82f6" />
 
       {/* Legs */}
@@ -99,7 +99,7 @@ export function Astronaut({ className }: { className?: string }) {
       />
       {/* Tiny reflected stars in visor */}
       <circle cx="150" cy="110" r="2" fill="#fff" opacity="0.8" />
-      <circle cx="176" cy="96" r="1.6" fill="#8b84ff" opacity="0.9" />
+      <circle cx="176" cy="96" r="1.6" fill="#4dfff5" opacity="0.9" />
       <circle cx="166" cy="120" r="1.3" fill="#fff" opacity="0.7" />
       <circle cx="184" cy="116" r="1.2" fill="#60a5fa" opacity="0.8" />
 
@@ -108,7 +108,7 @@ export function Astronaut({ className }: { className?: string }) {
         cx="160"
         cy="96"
         r="52"
-        stroke="#6c63ff"
+        stroke="#00fff0"
         strokeOpacity="0.6"
         strokeWidth="2"
         fill="none"

@@ -27,7 +27,7 @@ export function IphoneMockup({
           <div className="relative aspect-[9/19.3] overflow-hidden rounded-[2.1rem] bg-space-950">
             {/* Wallpaper glow */}
             <div className="absolute inset-0 bg-[radial-gradient(120%_70%_at_50%_-10%,#1a1450_0%,#0b1026_55%,#050816_100%)]" />
-            <div className="absolute -right-10 top-1/3 size-40 rounded-full bg-[radial-gradient(circle,rgba(108,99,255,0.25),transparent_65%)] blur-2xl" />
+            <div className="absolute -right-10 top-1/3 size-40 rounded-full bg-[radial-gradient(circle,rgba(0,255,240,0.25),transparent_65%)] blur-2xl" />
 
             {/* Status bar */}
             <div className="absolute inset-x-0 top-0 z-20 flex items-center justify-between px-6 pt-3 text-[10px] font-semibold text-white">

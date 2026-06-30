@@ -23,8 +23,8 @@ export function BookingButton({ children, ...props }: ButtonProps) {
         hideEventTypeDetails: false,
         layout: "month_view",
         cssVarsPerTheme: {
-          dark: { "cal-brand": "#6c63ff" },
-          light: { "cal-brand": "#6c63ff" },
+          dark: { "cal-brand": "#00fff0" },
+          light: { "cal-brand": "#00fff0" },
         },
       });
     })();

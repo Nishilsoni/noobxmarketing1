@@ -14,7 +14,7 @@ type PlanetProps = {
 export function Planet({
   size = 120,
   className,
-  from = "#6c63ff",
+  from = "#00fff0",
   to = "#3b82f6",
   ring = false,
   glow = true,

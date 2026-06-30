@@ -9,9 +9,9 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          "bg-nebula-500 text-white shadow-[0_8px_30px_-8px_rgba(108,99,255,0.6)] hover:bg-nebula-400 hover:shadow-[0_12px_40px_-8px_rgba(108,99,255,0.75)] hover:-translate-y-0.5 active:translate-y-0",
+          "bg-nebula-500 text-space-950 font-semibold shadow-[0_8px_30px_-8px_rgba(0,255,240,0.5)] hover:bg-nebula-400 hover:shadow-[0_12px_40px_-8px_rgba(0,255,240,0.65)] hover:-translate-y-0.5 active:translate-y-0",
         gradient:
-          "text-white shadow-[0_8px_30px_-8px_rgba(124,58,237,0.6)] bg-[linear-gradient(110deg,var(--color-nebula-500),var(--color-violet-500)_55%,var(--color-cosmos-500))] bg-[length:200%_auto] hover:bg-[position:100%_center] hover:-translate-y-0.5 active:translate-y-0",
+          "text-space-950 font-semibold shadow-[0_8px_30px_-8px_rgba(0,255,240,0.55)] bg-[linear-gradient(110deg,var(--color-nebula-400),var(--color-nebula-500)_45%,var(--color-cosmos-400))] bg-[length:200%_auto] hover:bg-[position:100%_center] hover:-translate-y-0.5 active:translate-y-0",
         secondary:
           "glass text-white hover:border-hairline-strong hover:bg-white/[0.06] hover:-translate-y-0.5 active:translate-y-0",
         ghost:
