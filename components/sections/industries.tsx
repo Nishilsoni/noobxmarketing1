@@ -136,7 +136,7 @@ function IndustryScreen({ ind, index }: { ind: Industry; index: number }) {
       </h3>
 
       {/* Hero metric card */}
-      <div className="relative mt-3 overflow-hidden rounded-2xl border border-white/10 bg-[linear-gradient(150deg,rgba(0,255,240,0.18),rgba(18,25,44,0.4))] p-3">
+      <div className="relative mt-3 overflow-hidden rounded-2xl border border-white/10 bg-[linear-gradient(150deg,rgba(0,255,240,0.18),rgba(18,25,44,0.4))] p-3 backdrop-blur-sm">
         <div className="flex items-start justify-between">
           <span className="flex size-8 items-center justify-center rounded-xl bg-white/10 text-nebula-200">
             <Icon name={ind.icon} className="size-4" />
@@ -243,7 +243,7 @@ function Sparkline() {
 function TabBar() {
   const items = [House, ChartColumnIncreasing, Sparkles, User];
   return (
-    <div className="mt-auto flex items-center justify-around rounded-2xl border border-white/10 bg-white/[0.04] px-2 py-2">
+    <div className="mt-auto flex items-center justify-around rounded-2xl border border-white/10 bg-white/[0.04] px-2 py-2 backdrop-blur-sm">
       {items.map((I, i) => (
         <I
           key={i}

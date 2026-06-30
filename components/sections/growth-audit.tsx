@@ -30,7 +30,7 @@ import {
 const TOTAL = 3;
 
 const fieldBase =
-  "w-full rounded-xl border border-hairline bg-space-950/40 px-4 py-3 text-sm text-white placeholder:text-stardust-dim transition-colors focus:border-nebula-400 focus:outline-none focus:ring-2 focus:ring-nebula-500/30";
+  "w-full rounded-xl border border-hairline bg-space-950/40 px-4 py-3 text-sm text-white placeholder:text-stardust-dim backdrop-blur-sm transition-colors focus:border-nebula-400 focus:outline-none focus:ring-2 focus:ring-nebula-500/30";
 
 const perks = [
   { icon: FileSearch, text: "A tailored review of your search, ads & site" },
@@ -278,7 +278,7 @@ export function GrowthAudit() {
 
                         {step === 2 && (
                           <div className="space-y-5">
-                            <div className="flex items-center gap-2 rounded-xl border border-hairline bg-nebula-500/[0.06] px-4 py-3 text-sm text-stardust">
+                            <div className="flex items-center gap-2 rounded-xl border border-hairline bg-nebula-500/[0.06] px-4 py-3 text-sm text-stardust backdrop-blur-sm">
                               <Telescope className="size-4 shrink-0 text-nebula-300" aria-hidden />
                               Almost there — where should we send your audit?
                             </div>

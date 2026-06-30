@@ -28,7 +28,7 @@ import {
 } from "@/lib/validations";
 
 const fieldBase =
-  "w-full rounded-xl border border-hairline bg-space-950/40 px-4 py-3 text-sm text-white placeholder:text-stardust-dim transition-colors focus:border-nebula-400 focus:outline-none focus:ring-2 focus:ring-nebula-500/30";
+  "w-full rounded-xl border border-hairline bg-space-950/40 px-4 py-3 text-sm text-white placeholder:text-stardust-dim backdrop-blur-sm transition-colors focus:border-nebula-400 focus:outline-none focus:ring-2 focus:ring-nebula-500/30";
 
 export function Contact() {
   const [submitted, setSubmitted] = React.useState(false);

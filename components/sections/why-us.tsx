@@ -96,7 +96,7 @@ export function WhyUs() {
                   {row.feature}
                 </p>
                 <div className="mt-3 space-y-2">
-                  <div className="flex items-start gap-2.5 rounded-xl border border-nebula-500/25 bg-nebula-500/[0.08] p-3">
+                  <div className="flex items-start gap-2.5 rounded-xl border border-nebula-500/25 bg-nebula-500/[0.08] p-3 backdrop-blur-sm">
                     <Check className="mt-0.5 size-4 shrink-0 text-aurora-400" aria-hidden />
                     <div>
                       <span className="text-[11px] font-semibold uppercase tracking-wide text-nebula-300">
@@ -107,7 +107,7 @@ export function WhyUs() {
                       </span>
                     </div>
                   </div>
-                  <div className="flex items-start gap-2.5 rounded-xl border border-hairline p-3">
+                  <div className="flex items-start gap-2.5 rounded-xl border border-hairline bg-white/[0.03] p-3 backdrop-blur-sm">
                     <X className="mt-0.5 size-4 shrink-0 text-stardust-dim/60" aria-hidden />
                     <div>
                       <span className="text-[11px] font-semibold uppercase tracking-wide text-stardust-dim">

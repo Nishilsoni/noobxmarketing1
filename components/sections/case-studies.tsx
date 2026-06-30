@@ -55,7 +55,7 @@ export function CaseStudies() {
                     {cs.metrics.map((m) => (
                       <div
                         key={m.label}
-                        className="bg-space-900/70 p-4 text-center"
+                        className="bg-space-900/70 p-4 text-center backdrop-blur-sm"
                       >
                         <div
                           className={`font-display text-xl font-bold sm:text-2xl ${accentText[cs.accent]}`}
