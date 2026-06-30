@@ -35,8 +35,8 @@
   --color-hairline-strong: rgba(255, 255, 255, 0.14);
 
   /* Typography */
-  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display-src), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-sans-src), ui-sans-serif, system-ui, sans-serif;
 
   /* Radii */
   --radius-xl: 1rem;

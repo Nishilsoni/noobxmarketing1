@@ -1,9 +1,108 @@
-import Script from "next/script";
+"use client";
 
-/** Loads GA4, Microsoft Clarity and Meta Pixel only when their IDs are
- *  configured via env vars. No-ops in development by default, so it never
- *  hurts performance or privacy out of the box. */
+import * as React from "react";
+import Script from "next/script";
+import { AnimatePresence, motion } from "framer-motion";
+import { Cookie } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const KEY = "noobx-consent";
+type Consent = "granted" | "denied";
+
+/** Consent-gated analytics (DPDP Act / GDPR friendly).
+ *  Scripts (GA4, Clarity, Meta Pixel) load ONLY after explicit consent.
+ *  The banner is shown until the visitor chooses. IDs come from env vars,
+ *  so everything is a no-op until those are configured. */
 export function Analytics() {
+  // "loading" prevents a banner flash before we've read localStorage.
+  const [consent, setConsent] = React.useState<Consent | null | "loading">(
+    "loading",
+  );
+
+  React.useEffect(() => {
+    try {
+      const v = localStorage.getItem(KEY);
+      setConsent(v === "granted" || v === "denied" ? (v as Consent) : null);
+    } catch {
+      setConsent(null);
+    }
+  }, []);
+
+  function choose(v: Consent) {
+    try {
+      localStorage.setItem(KEY, v);
+    } catch {
+      /* storage may be blocked — still update UI */
+    }
+    setConsent(v);
+  }
+
+  return (
+    <>
+      {consent === "granted" && <AnalyticsScripts />}
+
+      <AnimatePresence>
+        {consent === null && (
+          <motion.aside
+            role="dialog"
+            aria-label="Cookie consent"
+            aria-live="polite"
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 24 }}
+            transition={{ type: "spring", stiffness: 280, damping: 28 }}
+            className="fixed inset-x-3 bottom-3 z-[60] sm:inset-x-auto sm:left-5 sm:bottom-5 sm:max-w-sm"
+          >
+            <div className="glass-strong rounded-2xl border border-hairline-strong p-5 shadow-[0_16px_50px_-12px_rgba(0,0,0,0.75)]">
+              <div className="flex items-start gap-3">
+                <span className="flex size-9 shrink-0 items-center justify-center rounded-xl bg-nebula-500/15 text-nebula-300">
+                  <Cookie className="size-5" aria-hidden />
+                </span>
+                <div>
+                  <h2 className="font-display text-sm font-semibold text-white">
+                    We value your privacy
+                  </h2>
+                  <p className="mt-1 text-xs leading-relaxed text-stardust">
+                    We use cookies to understand how the Noobverse is used and to
+                    improve your experience. You can accept or decline analytics.
+                    See our{" "}
+                    <a
+                      href="/privacy"
+                      className="text-nebula-300 underline-offset-2 hover:underline"
+                    >
+                      Privacy Policy
+                    </a>
+                    .
+                  </p>
+                </div>
+              </div>
+              <div className="mt-4 flex gap-2">
+                <Button
+                  size="sm"
+                  variant="secondary"
+                  className="flex-1"
+                  onClick={() => choose("denied")}
+                >
+                  Decline
+                </Button>
+                <Button
+                  size="sm"
+                  variant="gradient"
+                  className="flex-1"
+                  onClick={() => choose("granted")}
+                >
+                  Accept
+                </Button>
+              </div>
+            </div>
+          </motion.aside>
+        )}
+      </AnimatePresence>
+    </>
+  );
+}
+
+function AnalyticsScripts() {
   const ga = process.env.NEXT_PUBLIC_GA_ID;
   const clarity = process.env.NEXT_PUBLIC_CLARITY_ID;
   const pixel = process.env.NEXT_PUBLIC_META_PIXEL_ID;

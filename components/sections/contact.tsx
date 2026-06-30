@@ -16,6 +16,7 @@ import {
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Button } from "@/components/ui/button";
+import { BookingButton } from "@/components/booking/booking-button";
 import { Reveal } from "@/components/motion/reveal";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/lib/site";
@@ -90,16 +91,10 @@ export function Contact() {
                 />
 
                 <div className="mt-8">
-                  <Button asChild variant="gradient" size="lg">
-                    <a
-                      href={siteConfig.calendly}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <CalendarClock className="size-5" aria-hidden />
-                      Schedule a call
-                    </a>
-                  </Button>
+                  <BookingButton variant="gradient" size="lg">
+                    <CalendarClock className="size-5" aria-hidden />
+                    Schedule a call
+                  </BookingButton>
                 </div>
 
                 <ul className="mt-10 space-y-5">

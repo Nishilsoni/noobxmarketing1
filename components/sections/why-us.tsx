@@ -44,20 +44,20 @@ export function WhyUs() {
           ))}
         </StaggerGroup>
 
-        {/* Comparison */}
+        {/* Comparison — table on desktop, stacked cards on mobile */}
         <Reveal className="mt-16" amount={0.15}>
-          <div className="overflow-hidden rounded-3xl border border-hairline glass">
-            {/* Header row */}
+          {/* Desktop / tablet table */}
+          <div className="hidden overflow-hidden rounded-3xl border border-hairline glass md:block">
             <div className="grid grid-cols-[1.2fr_1fr_1fr] border-b border-hairline">
-              <div className="hidden p-5 sm:block" />
+              <div className="p-5" />
               <div className="flex items-center justify-center gap-2 border-l border-hairline bg-nebula-500/10 p-5">
                 <Logo withText={false} />
-                <span className="font-display text-sm font-semibold text-white sm:text-base">
+                <span className="font-display text-sm font-semibold text-white lg:text-base">
                   NoobxMarketing
                 </span>
               </div>
               <div className="flex items-center justify-center border-l border-hairline p-5">
-                <span className="text-center font-display text-sm font-semibold text-stardust-dim sm:text-base">
+                <span className="text-center font-display text-sm font-semibold text-stardust-dim lg:text-base">
                   Traditional Agencies
                 </span>
               </div>
@@ -80,6 +80,44 @@ export function WhyUs() {
                 <div className="flex items-start gap-2 border-l border-hairline p-5 text-sm text-stardust-dim">
                   <X className="mt-0.5 size-4 shrink-0 text-stardust-dim/60" aria-hidden />
                   <span>{row.traditional}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile stacked cards */}
+          <div className="space-y-4 md:hidden">
+            {comparison.map((row) => (
+              <div
+                key={row.feature}
+                className="rounded-2xl border border-hairline glass p-5"
+              >
+                <p className="font-display text-sm font-semibold text-white">
+                  {row.feature}
+                </p>
+                <div className="mt-3 space-y-2">
+                  <div className="flex items-start gap-2.5 rounded-xl border border-nebula-500/25 bg-nebula-500/[0.08] p-3">
+                    <Check className="mt-0.5 size-4 shrink-0 text-aurora-400" aria-hidden />
+                    <div>
+                      <span className="text-[11px] font-semibold uppercase tracking-wide text-nebula-300">
+                        NoobxMarketing
+                      </span>
+                      <span className="mt-1 block text-sm text-stardust">
+                        {row.noobx}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-2.5 rounded-xl border border-hairline p-3">
+                    <X className="mt-0.5 size-4 shrink-0 text-stardust-dim/60" aria-hidden />
+                    <div>
+                      <span className="text-[11px] font-semibold uppercase tracking-wide text-stardust-dim">
+                        Traditional Agencies
+                      </span>
+                      <span className="mt-1 block text-sm text-stardust-dim">
+                        {row.traditional}
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}

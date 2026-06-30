@@ -1,9 +1,9 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
-import { Badge } from "@/components/ui/badge";
 import { Reveal } from "@/components/motion/reveal";
 
-/** Consistent eyebrow + title + description block for section tops. */
+/** Consistent eyebrow + title + description block for section tops.
+ *  Eyebrow is an understated accent-line label (no pill). */
 export function SectionHeading({
   eyebrow,
   title,
@@ -22,26 +22,35 @@ export function SectionHeading({
   as?: "h1" | "h2";
 }) {
   const Tag = as;
+  const centered = align === "center";
   return (
     <div
       className={cn(
-        "flex flex-col gap-4",
-        align === "center" ? "items-center text-center" : "items-start text-left",
+        "flex flex-col gap-5",
+        centered ? "items-center text-center" : "items-start text-left",
         className,
       )}
     >
       {eyebrow && (
         <Reveal>
-          <Badge>
-            <span className="size-1.5 rounded-full bg-nebula-400 shadow-[0_0_8px_2px_rgba(108,99,255,0.7)]" />
+          <span
+            className={cn(
+              "flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.24em] text-nebula-300",
+              centered && "justify-center",
+            )}
+          >
+            <span className="h-px w-7 bg-gradient-to-r from-transparent to-nebula-400/70" />
             {eyebrow}
-          </Badge>
+            {centered && (
+              <span className="h-px w-7 bg-gradient-to-l from-transparent to-nebula-400/70" />
+            )}
+          </span>
         </Reveal>
       )}
       <Reveal delay={0.05}>
         <Tag
           className={cn(
-            "max-w-3xl text-balance text-3xl font-semibold sm:text-4xl lg:text-5xl",
+            "max-w-3xl text-balance text-[2rem] font-semibold leading-[1.08] tracking-tight sm:text-[2.6rem] lg:text-[3.25rem]",
             titleClassName,
           )}
         >
@@ -53,7 +62,7 @@ export function SectionHeading({
           <p
             className={cn(
               "max-w-2xl text-pretty text-base leading-relaxed text-stardust sm:text-lg",
-              align === "center" ? "mx-auto" : "",
+              centered && "mx-auto",
             )}
           >
             {description}

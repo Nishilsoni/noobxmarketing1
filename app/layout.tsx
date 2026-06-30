@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Space_Grotesk, Inter } from "next/font/google";
+import { Sora, Inter } from "next/font/google";
 import "./globals.css";
 
 import { siteConfig } from "@/lib/site";
@@ -7,6 +7,7 @@ import { CosmicBackground } from "@/components/effects/cosmic-background";
 import { SmoothScroll } from "@/components/providers/smooth-scroll";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { FloatingCTA } from "@/components/layout/floating-cta";
 import { Analytics } from "@/components/analytics/analytics";
 import { JsonLd } from "@/components/seo/json-ld";
 import {
@@ -15,17 +16,17 @@ import {
   localBusinessSchema,
 } from "@/lib/seo";
 
-const spaceGrotesk = Space_Grotesk({
+const sora = Sora({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-space-grotesk",
-  weight: ["400", "500", "600", "700"],
+  variable: "--font-display-src",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-inter",
+  variable: "--font-sans-src",
 });
 
 export const metadata: Metadata = {
@@ -102,7 +103,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${spaceGrotesk.variable} ${inter.variable}`}
+      className={`${sora.variable} ${inter.variable}`}
       suppressHydrationWarning
     >
       <head>
@@ -123,6 +124,7 @@ export default function RootLayout({
           </main>
           <Footer />
         </SmoothScroll>
+        <FloatingCTA />
         <Analytics />
         <JsonLd
           data={[organizationSchema(), websiteSchema(), localBusinessSchema()]}

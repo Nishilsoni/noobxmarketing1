@@ -1,9 +1,10 @@
 import { NextResponse } from "next/server";
-import { contactSchema } from "@/lib/validations";
+import { contactSchema, auditSchema } from "@/lib/validations";
+import { notify } from "@/lib/email";
 
-/** Receives contact + newsletter submissions. Forwards to
- *  CONTACT_FORM_ENDPOINT when configured; otherwise accepts and logs
- *  (so the demo works out of the box). */
+/** Receives contact, audit + newsletter submissions, validates them, and
+ *  fans them out to every configured destination (email / webhook / log)
+ *  via notify(). See lib/email.ts. */
 export async function POST(req: Request) {
   let body: unknown;
   try {
@@ -20,7 +21,21 @@ export async function POST(req: Request) {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ ok: false, error: "Invalid email" }, { status: 400 });
     }
-    await forward({ type: "newsletter", email });
+    await notify({ type: "newsletter", email });
+    return NextResponse.json({ ok: true });
+  }
+
+  // Free Growth Audit lead.
+  if (data?.type === "audit") {
+    const parsed = auditSchema.safeParse(data);
+    if (!parsed.success) {
+      return NextResponse.json(
+        { ok: false, errors: parsed.error.flatten().fieldErrors },
+        { status: 422 },
+      );
+    }
+    if (parsed.data.hp) return NextResponse.json({ ok: true }); // honeypot
+    await notify({ type: "audit", ...parsed.data, hp: undefined });
     return NextResponse.json({ ok: true });
   }
 
@@ -38,24 +53,6 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: true });
   }
 
-  await forward({ type: "contact", ...parsed.data, website: undefined });
+  await notify({ type: "contact", ...parsed.data, website: undefined });
   return NextResponse.json({ ok: true });
-}
-
-async function forward(payload: Record<string, unknown>) {
-  const endpoint = process.env.CONTACT_FORM_ENDPOINT;
-  if (!endpoint) {
-    // No endpoint configured — log for local dev.
-    console.info("[lead] received (no endpoint configured):", payload);
-    return;
-  }
-  try {
-    await fetch(endpoint, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
-  } catch (err) {
-    console.error("[lead] forward failed:", err);
-  }
 }

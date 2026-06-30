@@ -44,3 +44,49 @@ export const serviceOptions = [
   "Full-funnel growth",
   "Not sure yet",
 ];
+
+/* ───────────────── Free Growth Audit (lead magnet) ───────────────── */
+
+const urlishRegex = /^(https?:\/\/)?([\w-]+\.)+[\w-]{2,}(\/\S*)?$/i;
+
+export const auditSchema = z.object({
+  website: z
+    .string()
+    .min(3, "Please enter your website.")
+    .regex(urlishRegex, "Enter a valid website, e.g. yourbrand.com"),
+  goal: z.string().min(1, "Pick your primary goal."),
+  focus: z.array(z.string()).min(1, "Choose at least one focus area."),
+  budget: z.string().min(1, "Select a budget range."),
+  name: z
+    .string()
+    .min(2, "Please enter your name.")
+    .max(80, "That name is a little too long."),
+  email: z
+    .string()
+    .min(1, "Email is required.")
+    .regex(emailRegex, "Please enter a valid email address."),
+  // Honeypot — must stay empty.
+  hp: z.string().max(0).optional().or(z.literal("")),
+});
+
+export type AuditValues = z.infer<typeof auditSchema>;
+
+export const auditGoals = [
+  "More leads & sales",
+  "Higher search rankings",
+  "Grow brand awareness",
+  "Launch a new product",
+  "Improve my website",
+  "Not sure — guide me",
+];
+
+export const auditFocus = [
+  "SEO",
+  "Paid Ads (PPC)",
+  "Social Media",
+  "Content",
+  "Email",
+  "Website / Design",
+  "Video / Reels",
+];
+

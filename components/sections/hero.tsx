@@ -8,10 +8,9 @@ import {
   useTransform,
   useReducedMotion,
 } from "framer-motion";
-import { Rocket, ArrowRight, Star, Sparkles } from "lucide-react";
+import { Rocket, ArrowRight, Star } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { OrbitalSystem } from "@/components/effects/orbital-system";
 import { Counter } from "@/components/motion/counter";
 import { Magnetic } from "@/components/motion/magnetic";
@@ -58,10 +57,10 @@ export function Hero() {
           {/* ── Left: copy ─────────────────────────────── */}
           <div className="max-w-2xl">
             <motion.div custom={0} variants={fadeUp} initial="hidden" animate="show">
-              <Badge className="border-nebula-500/30 bg-nebula-500/10">
-                <Sparkles className="size-3.5 text-nebula-400" aria-hidden />
-                Welcome to the Noobverse — your gateway to growth
-              </Badge>
+              <span className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.24em] text-nebula-300">
+                <span className="h-px w-7 bg-gradient-to-r from-transparent to-nebula-400/70" />
+                Welcome to the Noobverse
+              </span>
             </motion.div>
 
             <motion.h1

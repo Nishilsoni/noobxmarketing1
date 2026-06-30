@@ -16,8 +16,11 @@ export const siteConfig = {
   ogImage: "/og.png",
   locale: "en_IN",
   email: "hello@noobxmarketing.com",
-  phone: "+91 98250 12345",
-  phoneHref: "tel:+919825012345",
+  phone: "+91 79903 47243",
+  phoneHref: "tel:+917990347243",
+  whatsapp: "917990347243", // digits only, country code first (for wa.me)
+  whatsappMessage:
+    "Hi NoobxMarketing! I'd like to learn how you can help grow my brand.",
   address: {
     street: "Orbit Plaza, SG Highway",
     city: "Ahmedabad",
@@ -27,9 +30,15 @@ export const siteConfig = {
   },
   geo: { lat: 23.0225, lng: 72.5714 },
   foundingYear: 2019,
-  calendly:
-    process.env.NEXT_PUBLIC_CALENDLY_URL ||
-    "https://calendly.com/noobxmarketing/consultation",
+  // Free scheduling via Cal.com (open-source Calendly alternative).
+  // `calLink` powers the on-site popup embed; `url` is the fallback link
+  // (also lets you swap in Google Calendar / Zoho Bookings, etc.).
+  booking: {
+    calLink: process.env.NEXT_PUBLIC_CAL_LINK || "noobxmarketing/consultation",
+    url:
+      process.env.NEXT_PUBLIC_BOOKING_URL ||
+      "https://cal.com/noobxmarketing/consultation",
+  },
   socials: {
     twitter: "https://twitter.com/noobxmarketing",
     linkedin: "https://www.linkedin.com/company/noobxmarketing",
@@ -47,7 +56,7 @@ export const navItems: NavItem[] = [
   { label: "Services", href: "#services" },
   { label: "Process", href: "#process" },
   { label: "Case Studies", href: "#case-studies" },
-  { label: "Testimonials", href: "#testimonials" },
+  { label: "Free Audit", href: "#audit" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ];
