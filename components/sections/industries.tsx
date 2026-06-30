@@ -121,7 +121,7 @@ function IndustryScreen({ ind, index }: { ind: Industry; index: number }) {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-1.5">
           <span className="size-4 rounded-full bg-gradient-to-br from-nebula-400 to-cosmos-500" />
-          <span className="text-[11px] font-semibold text-white">Noobx Growth</span>
+          <span className="text-[11px] font-semibold text-white">Noob X Growth</span>
         </div>
         <span className="flex items-center gap-1 rounded-full bg-aurora-500/15 px-1.5 py-0.5 text-[8px] font-semibold uppercase tracking-wide text-aurora-400">
           <span className="size-1 rounded-full bg-aurora-400" /> Live
@@ -180,7 +180,7 @@ function CtaScreen() {
     <div className="flex h-full flex-col text-left">
       <div className="flex items-center gap-1.5">
         <span className="size-4 rounded-full bg-gradient-to-br from-nebula-400 to-cosmos-500" />
-        <span className="text-[11px] font-semibold text-white">Noobx Growth</span>
+        <span className="text-[11px] font-semibold text-white">Noob X Growth</span>
       </div>
 
       <div className="flex flex-1 flex-col items-center justify-center text-center">

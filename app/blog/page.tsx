@@ -8,12 +8,12 @@ import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 export const metadata: Metadata = {
   title: "Blog — Growth Insights from the Noobverse",
   description:
-    "Practical SEO, paid media, content, email and design strategy from the specialists at NoobxMarketing. Field notes from the frontier of growth.",
+    "Practical SEO, paid media, content, email and design strategy from the specialists at Noob X Marketing. Field notes from the frontier of growth.",
   alternates: { canonical: "/blog" },
   openGraph: {
-    title: "Blog — Growth Insights from the Noobverse · NoobxMarketing",
+    title: "Blog — Growth Insights from the Noobverse · Noob X Marketing",
     description:
-      "Practical SEO, paid media, content, email and design strategy from the NoobxMarketing crew.",
+      "Practical SEO, paid media, content, email and design strategy from the Noob X Marketing crew.",
     url: "/blog",
     type: "website",
   },

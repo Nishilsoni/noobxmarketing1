@@ -5,11 +5,11 @@
  */
 
 export const siteConfig = {
-  name: "NoobxMarketing",
-  legalName: "NoobxMarketing LLC",
+  name: "Noob X Marketing",
+  legalName: "Noob X Marketing LLC",
   tagline: "Launch Your Brand Into The Digital Universe",
   description:
-    "NoobxMarketing is a premium digital marketing agency engineering SEO, paid media, content and design systems that send ambitious brands into orbit. Data-driven growth, cosmic creativity.",
+    "Noob X Marketing is a premium digital marketing agency engineering SEO, paid media, content and design systems that send ambitious brands into orbit. Data-driven growth, cosmic creativity.",
   url:
     process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
     "https://noobxmarketing.com",
@@ -20,7 +20,7 @@ export const siteConfig = {
   phoneHref: "tel:+917990347243",
   whatsapp: "917990347243", // digits only, country code first (for wa.me)
   whatsappMessage:
-    "Hi NoobxMarketing! I'd like to learn how you can help grow my brand.",
+    "Hi Noob X Marketing! I'd like to learn how you can help grow my brand.",
   address: {
     street: "Orbit Plaza, SG Highway",
     city: "Ahmedabad",

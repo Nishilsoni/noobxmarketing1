@@ -3,7 +3,7 @@ import type { Testimonial } from "@/types";
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "NoobxMarketing didn't just improve our rankings — they rebuilt how we think about growth. Organic now drives the majority of our revenue.",
+      "Noob X Marketing didn't just improve our rankings — they rebuilt how we think about growth. Organic now drives the majority of our revenue.",
     name: "Amara Osei",
     role: "VP of Marketing",
     company: "Nova Skincare",

@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     "web design agency",
     "growth marketing",
     "performance marketing",
-    "NoobxMarketing",
+    "Noob X Marketing",
   ],
   authors: [{ name: siteConfig.name, url: siteConfig.url }],
   creator: siteConfig.name,
@@ -82,10 +82,7 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
-  icons: {
-    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
-    apple: [{ url: "/icon.svg" }],
-  },
+  // Icons are provided by app/favicon.ico, app/icon.png, app/apple-icon.png
   manifest: "/manifest.webmanifest",
 };
 

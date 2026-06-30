@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-/** "Noobie" — the NoobxMarketing astronaut mascot. A refined, minimal
+/** "Noobie" — the Noob X Marketing astronaut mascot. A refined, minimal
  *  SVG illustration with a glassmorphic visor. Decorative only. */
 export function Astronaut({ className }: { className?: string }) {
   return (
@@ -8,7 +8,7 @@ export function Astronaut({ className }: { className?: string }) {
       viewBox="0 0 320 360"
       fill="none"
       role="img"
-      aria-label="Noobie, the NoobxMarketing astronaut, floating in space"
+      aria-label="Noobie, the Noob X Marketing astronaut, floating in space"
       className={cn("h-full w-full overflow-visible", className)}
     >
       <defs>

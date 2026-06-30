@@ -13,7 +13,7 @@ type LeadType = "contact" | "audit" | "newsletter";
 type LeadPayload = Record<string, unknown> & { type: LeadType };
 
 const FROM =
-  process.env.LEAD_FROM_EMAIL || "NoobxMarketing <onboarding@resend.dev>";
+  process.env.LEAD_FROM_EMAIL || "Noob X Marketing <onboarding@resend.dev>";
 const TO = process.env.LEAD_TO_EMAIL || siteConfig.email;
 
 export async function notify(payload: LeadPayload) {
@@ -72,7 +72,7 @@ function buildEmail(payload: LeadPayload): {
 
   if (payload.type === "newsletter") {
     return {
-      subject: "✉️ New newsletter subscriber — NoobxMarketing",
+      subject: "✉️ New newsletter subscriber — Noob X Marketing",
       replyTo: email,
       html: shell("New newsletter subscriber", [["Email", String(payload.email ?? "")]]),
     };
@@ -135,7 +135,7 @@ function shell(title: string, rows: [string, string][]) {
       <tr>
         <td style="padding:24px 24px 8px;">
           <div style="display:inline-block;background:linear-gradient(135deg,#00fff0,#3b82f6);color:#fff;width:36px;height:36px;line-height:36px;text-align:center;border-radius:10px;font-weight:700;">N</div>
-          <span style="color:#fff;font-size:18px;font-weight:600;margin-left:10px;">NoobxMarketing</span>
+          <span style="color:#fff;font-size:18px;font-weight:600;margin-left:10px;">Noob X Marketing</span>
         </td>
       </tr>
       <tr><td style="padding:0 24px 8px;color:#b6c0d9;font-size:15px;font-weight:600;">${esc(title)}</td></tr>

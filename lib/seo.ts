@@ -14,7 +14,7 @@ export function organizationSchema() {
     name: siteConfig.name,
     legalName: siteConfig.legalName,
     url,
-    logo: `${url}/icon.svg`,
+    logo: `${url}/icon-512.png`,
     image: `${url}${siteConfig.ogImage}`,
     description: siteConfig.description,
     email: siteConfig.email,

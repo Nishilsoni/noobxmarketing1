@@ -41,7 +41,7 @@ export default function OpengraphImage() {
             N
           </div>
           <div style={{ display: "flex", fontSize: 30, fontWeight: 600 }}>
-            NoobxMarketing
+            Noob X Marketing
           </div>
         </div>
 

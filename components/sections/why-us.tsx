@@ -13,7 +13,7 @@ export function WhyUs() {
     <section id="why-us" className="section-pad relative scroll-mt-24">
       <Container>
         <SectionHeading
-          eyebrow="Why NoobxMarketing"
+          eyebrow="Why Noob X Marketing"
           title={
             <>
               A different breed of{" "}
@@ -53,7 +53,7 @@ export function WhyUs() {
               <div className="flex items-center justify-center gap-2 border-l border-hairline bg-nebula-500/10 p-5">
                 <Logo withText={false} />
                 <span className="font-display text-sm font-semibold text-white lg:text-base">
-                  NoobxMarketing
+                  Noob X Marketing
                 </span>
               </div>
               <div className="flex items-center justify-center border-l border-hairline p-5">
@@ -100,7 +100,7 @@ export function WhyUs() {
                     <Check className="mt-0.5 size-4 shrink-0 text-aurora-400" aria-hidden />
                     <div>
                       <span className="text-[11px] font-semibold uppercase tracking-wide text-nebula-300">
-                        NoobxMarketing
+                        Noob X Marketing
                       </span>
                       <span className="mt-1 block text-sm text-stardust">
                         {row.noobx}
