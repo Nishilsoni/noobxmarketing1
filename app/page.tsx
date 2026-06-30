@@ -2,7 +2,6 @@ import { Hero } from "@/components/sections/hero";
 import { Trust } from "@/components/sections/trust";
 import { About } from "@/components/sections/about";
 import { Services } from "@/components/sections/services";
-import { Industries } from "@/components/sections/industries";
 import { WhyUs } from "@/components/sections/why-us";
 import { Process } from "@/components/sections/process";
 import { CaseStudies } from "@/components/sections/case-studies";
@@ -21,7 +20,6 @@ export default function HomePage() {
       <Trust />
       <About />
       <Services />
-      <Industries />
       <WhyUs />
       <Process />
       <CaseStudies />
