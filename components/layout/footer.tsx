@@ -8,7 +8,7 @@ import {
   XIcon,
   InstagramIcon,
   YouTubeIcon,
-  DribbbleIcon,
+  PinterestIcon,
 } from "@/components/ui/social-icons";
 
 const socials = [
@@ -16,7 +16,7 @@ const socials = [
   { label: "X (Twitter)", href: siteConfig.socials.twitter, Icon: XIcon },
   { label: "Instagram", href: siteConfig.socials.instagram, Icon: InstagramIcon },
   { label: "YouTube", href: siteConfig.socials.youtube, Icon: YouTubeIcon },
-  { label: "Dribbble", href: siteConfig.socials.dribbble, Icon: DribbbleIcon },
+  { label: "Pinterest", href: siteConfig.socials.pinterest, Icon: PinterestIcon },
 ];
 
 export function Footer() {

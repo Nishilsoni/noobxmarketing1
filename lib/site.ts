@@ -22,14 +22,14 @@ export const siteConfig = {
   whatsappMessage:
     "Hi Noob X Marketing! I'd like to learn how you can help grow my brand.",
   address: {
-    street: "Orbit Plaza, SG Highway",
-    city: "Ahmedabad",
+    street: "Gotri",
+    city: "Vadodara",
     region: "GJ",
-    postalCode: "380015",
+    postalCode: "390021",
     country: "IN",
   },
   geo: { lat: 23.0225, lng: 72.5714 },
-  foundingYear: 2019,
+  foundingYear: 2023,
   // Free scheduling via Cal.com (open-source Calendly alternative).
   // `calLink` powers the on-site popup embed; `url` is the fallback link
   // (also lets you swap in Google Calendar / Zoho Bookings, etc.).
@@ -42,9 +42,9 @@ export const siteConfig = {
   socials: {
     twitter: "https://twitter.com/noobxmarketing",
     linkedin: "https://www.linkedin.com/company/noobxmarketing",
-    instagram: "https://www.instagram.com/noobxmarketing",
+    instagram: "https://www.instagram.com/noob_x_marketing",
     youtube: "https://www.youtube.com/@noobxmarketing",
-    dribbble: "https://dribbble.com/noobxmarketing",
+    pinterest: "https://www.pinterest.com/noobxmarketing",
   },
   twitterHandle: "@noobxmarketing",
 } as const;
