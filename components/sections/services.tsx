@@ -11,7 +11,7 @@ import type { Service } from "@/types";
 
 /* Big phones, but height-capped to the viewport so they never overflow the
    pinned stage. Width is driven by viewport height (aspect ~9:19.3). */
-const PHONE = "w-[min(22rem,41vh)]";
+const PHONE = "w-[min(15rem,34vh)] sm:w-[min(22rem,41vh)]";
 
 const accent = {
   nebula: {
